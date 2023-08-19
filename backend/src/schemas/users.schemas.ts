@@ -8,5 +8,5 @@ export const userSchema = z.object({
     password: z.string(), 
 })
 
-export const userRequestSchema = userSchema.omit({ id: true, })
-export const userResponseSchema = userSchema.omit({ password: true, })
+export const userRequestSchema = userSchema.omit({ id: true })
+export const userResponseSchema = userSchema.omit({ password: true })

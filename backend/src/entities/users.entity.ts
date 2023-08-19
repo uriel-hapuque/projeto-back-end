@@ -14,7 +14,7 @@ export class User {
     @Column({type: "varchar", length: 45, unique: true})
     email: string;
 
-    @Column({type: "varchar", length: 45})
+    @Column({type: "varchar"})
     password: string;
 
     @BeforeInsert()

@@ -10,7 +10,6 @@ import { tLoginRequest } from "../../interfaces/login.interfaces";
 
 type tLoginResponse = {
   token: string;
-  userId: number;
 };
 
 export const createTokenService = async (
@@ -36,8 +35,7 @@ export const createTokenService = async (
     expiresIn: "24h",
     subject: String(user.id),
   });
-  const userId: number = user.id;
-  const loginReturn = { token, userId };
+  
 
-  return loginReturn;
+  return {token};
 };
