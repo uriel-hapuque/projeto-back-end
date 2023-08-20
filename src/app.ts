@@ -13,4 +13,6 @@ app.use("/login", loginRoutes)
 
 app.use(handleErrors);
 
+app.listen(3001)
+
 export default app;
