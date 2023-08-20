@@ -8,6 +8,7 @@ export const verifyIfUserExistsByParamId = async (
   res: Response,
   next: NextFunction
 ): Promise<void> => {
+ 
   const userId: number = parseInt(req.params.id);
 
   const userRepo: Repository<User> = AppDataSource.getRepository(User);

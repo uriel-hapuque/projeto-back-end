@@ -3,6 +3,7 @@ import { tUserRequest, tUserResponse } from "../interfaces/users.interfaces";
 import { createUserService } from "../services/users/createUser.service";
 import { User } from "../entities/users.entity";
 import { getUserService } from "../services/users/getUser.service";
+import { deleteUserService } from "../services/users/deleteUser.service";
 
 export const createUserController = async (req: Request, res: Response): Promise<Response<User>> => {
     const userData: tUserRequest = req.body;
@@ -18,4 +19,13 @@ export const getUserController = async (req: Request, res: Response):Promise<Res
     const user: tUserResponse = await getUserService(userId)
 
     return res.status(200).json(user)
+}
+
+export const deleteUserController = async (req: Request, res: Response): Promise<Response<User>> => {
+
+    const userId: number = parseInt(res.locals.id)
+
+    await deleteUserService(userId)
+
+    return res.status(204).send()
 }

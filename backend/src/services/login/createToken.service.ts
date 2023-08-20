@@ -34,8 +34,7 @@ export const createTokenService = async (
   const token = jwt.sign({ name: user.name }, process.env.SECRET_KEY!, {
     expiresIn: "24h",
     subject: String(user.id),
-  });
-  
+  });  
 
   return {token};
 };

@@ -1,4 +1,5 @@
-
+import "reflect-metadata";
+import "express-async-errors";
 import { handleErrors } from "./error";
 
 import express, { Application } from "express";
