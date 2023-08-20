@@ -1,1 +1,2 @@
-# projeto-back-end
+## COMANDO PARA INSTALAR AS DEPENDÊNCIAS (EXECUTE NO TERMINAL INTEGRADO DA PASTA)
+    npm install --production
